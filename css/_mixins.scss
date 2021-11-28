@@ -1,0 +1,27 @@
+@media (min-width:90em){
+
+}
+
+//VISIBILITY
+
+//850px 1080px 1440px
+$breakpoints-up:("medium": 53.125em,"large": 67.5em,"xlarge": 90em);
+
+
+//849px 1079px 1439px
+$breakpoints-down:("small":53.0625em ,"medium": 67.4375em,"large":89.9375em);
+
+
+
+
+@mixin breakpoint-up($size){
+    @media (min-width:map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size){
+    @media (max-width:map-get($breakpoints-down, $size)){
+        @content;
+    }
+}

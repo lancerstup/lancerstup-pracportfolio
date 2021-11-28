@@ -1,0 +1,148 @@
+nav{
+    padding:1rem 5rem;
+    background:#6682b4;
+    
+ul{
+    padding:0;
+    list-style: none;
+    
+    
+  
+> li{
+    display:inline-block;
+    font-size:1rem;
+    position:relative;
+    text-transform: uppercase;
+    &:not(:last-child){
+        margin-right:2rem;
+    }
+}
+
+> li a{
+    text-decoration: none;
+    color:#2e2929;
+    transition:all 200ms ease-in-out;
+
+    &:hover{
+        color:rgb(212, 230, 255);
+        &::after{
+            background:rgb(37, 37, 78);
+        }
+
+       
+    }
+
+    &::after{
+        content:"";
+        display:block;
+        position:absolute;
+        height:3px;
+        left:0;
+        right:0;
+        bottom: -21px;
+
+        
+    }
+
+
+}
+}
+
+@include breakpoint-down(small){
+    padding: 1rem 1.5rem;
+         
+}
+
+}
+
+
+
+.nav-upper{
+    h1{
+        cursor: pointer;
+        margin:0;
+    }
+}
+
+.nav-list{
+    ul{
+        margin:0;    
+    }
+}
+
+
+.nav-menu{
+
+    > span{
+        display:block;
+        width:26px;
+        height:2px;
+        background:black;
+        transition: all 250ms ease-in-out;
+        transform-origin:6px 1px ;
+
+        &:not(:last-child){
+            margin-bottom:3px;
+        }
+    }
+   
+}
+
+@include breakpoint-down(small){
+    .nav-menu{
+
+        
+    &__links{
+    display:flex;
+    padding-top:2rem;
+    padding-bottom:2rem;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position:absolute;
+    width:calc(100% - 5rem);
+    left:50%;
+    transform:translate(-50%);
+
+    background:white;
+    border: 1px solid black;
+
+    
+
+    a{
+        height:2rem;
+        text-decoration: none;
+        color:black;
+    }
+}
+
+    }
+}
+
+
+.nav-links{
+    display:flex;
+    padding-top:2rem;
+    padding-bottom:2rem;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position:absolute;
+    width:calc(100% - 5rem);
+    left:50%;
+    transform:translate(-50%);
+
+    background:white;
+
+    
+
+    a{
+        height:2rem;
+        text-decoration: none;
+        color:black;
+    }
+}

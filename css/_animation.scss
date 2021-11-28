@@ -1,0 +1,103 @@
+@keyframes fade-in {
+    from{
+        visibility:hidden;
+        opacity:0;
+
+    }
+    1%{
+        visibility:visible;
+    }
+
+    to{
+        visibility:visible;
+        opacity:1;
+
+    }
+}
+
+.fade-in > *:last-child{
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+.fade-in-for-brgr{
+    animation: fade-in 300ms ease-in-out forwards;
+
+}
+
+
+@keyframes fade-out {
+    from{
+        visibility:visible;
+        opacity:1;
+
+    }
+
+    99%{
+        visibility:visible;
+        opacity:0;
+    }
+    
+    to{
+        visibility:hidden;
+        opacity:0;
+
+    }
+}
+
+.fade-out-for-brgr{
+    animation: fade-out 300ms ease-in-out forwards;
+
+}
+
+
+
+
+//hamburger links animation
+.has-fadeham{
+    visibility:hidden;
+    opacity:0;
+}
+
+
+//FAQ animation
+
+.fade-out > *:last-child{
+    animation: fade-out 350ms ease-in-out forwards;
+}
+
+.open > *:first-child{
+    transform: rotate(90deg)
+}
+
+.colored > *:not(:first-child):not(:last-child){
+    color:rgb(37, 37, 78);
+
+}
+
+.has-fadein > *:last-child{
+    max-height:999px;
+    transition: all 250ms ease-in-out;
+}
+.has-fade > *:last-child{
+    max-height:0;
+    transition: all 300ms ease-in-out;
+}
+
+
+
+
+
+
+.op{
+    >span:first-child{
+        transform: rotate(45deg);
+    }
+
+    >span:nth-child(2){
+        opacity:0;
+    }
+
+    >span:last-child{
+        transform: rotate(-45deg);
+    }
+}
